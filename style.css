@@ -741,10 +741,12 @@ input[type="checkbox"] {
 
 .immigration .universities-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
 	gap: 20px;
 	max-width: 1120px;
-	margin: 0 auto
+	margin: 0 auto;
 }
 
 /* Fixed phone call */
