@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="uk-UA">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Лікар-хірург | Лікар-нейрохірург - Операції та консультації</title>
+	<meta name="description"
+		content="Професійна хірургічна та нейрохірургічна допомога. Видалення гриж, доброякісних новоутворень, операції на хребті та головному мозку.">
+	<meta name="keywords"
+		content="хірург, нейрохірург, операції, видалення гриж, лапароскопія, хребет, головний мозок, менінгіома, гліобластома">
+	<meta name="author" content="Лікар-хірург | Лікар-нейрохірург">
+	<meta name="robots" content="index, follow">
+	<link rel="canonical" href="https://yourwebsite.com">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="/home.css">
+	<link rel="stylesheet" href="./animation/aos.css">
+	<!-- Open Graph (для соцмереж) -->
+	<meta property="og:title" content="Лікар-хірург | Лікар-нейрохірург - Професійні операції та консультації">
+	<meta property="og:description"
+		content="Хірургічні та нейрохірургічні операції: видалення гриж, новоутворень, лікування хребта, карпального тунелю та фантомного болю.">
+	<meta property="og:image" content="https://yourwebsite.com/og.jpg">
+	<meta property="og:url" content="https://yourwebsite.com">
+	<meta property="og:type" content="website">
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Лікар-хірург | Лікар-нейрохірург - Консультації та операції">
+	<meta name="twitter:description"
+		content="Професійні хірургічні та нейрохірургічні послуги. Видалення гриж, доброякісних пухлин, операції на хребті та головному мозку.">
+	<meta name="twitter:image" content="https://yourwebsite.com/og.jpg">
+</head>
+
+
+<body>
+	<header id="home">
+		<div class="container">
+			<div class="row">
+				<a href="/" class="logo">
+					<img src="/assets/icons/logo1.webp" alt="logo">
+					<img src="/assets/icons/logo2.webp" alt="logo">
+				</a>
+				<nav class="header__menu">
+					<ul class="header__menu-list row">
+						<li><a href="/#Study">Study in Ukraine</a></li>
+						<li><a href="/#Work">Work in Ukraine</a></li>
+						<li><a href="/#Immigration">Immigration</a></li>
+						<li><a href="/#Universities">Universities</a></li>
+						<li><a href="/#Contacts">Contacts</a></li>
+						<li class="row">
+							<button id="open-modal" class="btn"><img src="assets/icons/whatsapp.svg">+123 (456) 7890</button>
+						</li>
+					</ul>
+				</nav>
+				<div class="header__mobile-nav">
+					<div class="burger">
+						<figure></figure>
+						<figure></figure>
+						<figure></figure>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero">
+			<div class="container">
+				<div class="img-wrapper">
+					<div class="hero__main-text">
+						<span>Your Gateway</span>
+						<span>
+							to Quality Education in Ukraine
+						</span>
+					</div>
+					<div class="hero__sub-text">
+						Professional legal assistance for students, immigration services, and work permits. Start your journey to success with our expert guidance.
+					</div>
+					<button class="btn hero__cta" onclick="location.href='#contacts'">Get free consultation</button>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer id="contacts">
+		<div class="container">
+			<div class="footer__wrapper row">
+				<a href="/" class="logo">
+					<img src="/assets/icons/logo.svg" alt="logo">
+					<span>Forze Space</span>
+				</a>
+				<div class="footer__contacts">
+					<a href="tel:+380980275819">+38 098 0275 819</a>
+					<a href="mailto:melayjob@gmail.com">melayjob@gmail.com
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="phone-call-wrapper">
+		<a href="tel:+380980275819" class="phone-call">
+			<img src="/assets/icons/phone.svg" alt="phone">
+		</a>
+	</div>
+
+	<div class="modal">
+		<div class="modal__window">
+			<div class="request__form">
+				<a href="/" class="logo">
+					<img src="/assets/icons/logo.svg" alt="logo">
+					<span>Forze Space</span>
+				</a>
+				<p class="request__form-subtitle">Залишайте заявку і ми Вам зателефонуємо</p>
+				<form id="orderForm">
+					<input type="text" name="username" placeholder="Ваше імя">
+					<input type="text" id="phone" name="phone" placeholder="Номер телефону">
+					<p class="form-message">Заявку надіслано!</p>
+					<button class="btn">Надіслати заявку</button>
+				</form>
+			</div>
+
+			<button id="close-modal">✖</button>
+		</div>
+	</div>
+
+	<script src="./animation/aos.js"></script>
+	<script src="./script.js"></script>
+	<script src="./burger.js"></script>
+
+	<script>
+		AOS.init();
+	</script>
+</body>
+
+</html>

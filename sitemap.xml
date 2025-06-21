@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://forze.space/</loc>
+        <lastmod>2025-02-25</lastmod>
+		  <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://forze.space/blog/vybir-typu-saitu-dlia-biznesu</loc>
+        <lastmod>2025-02-25</lastmod>
+		  <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+	 <url>
+        <loc>https://forze.space/blog/vybir</loc>
+        <lastmod>2025-02-25</lastmod>
+		  <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+	 <url>
+        <loc>https://forze.space/contacts</loc>
+        <lastmod>2025-02-25</lastmod>
+		  <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>

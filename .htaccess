@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Перенаправлення з www на без www
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+# Видалення розширення .html з URL
+RewriteCond %{THE_REQUEST} \s([^.]+)\.html [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# Додавання .html до запитів, якщо файл або папка не існують
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ $1.html [L]
