@@ -1,4 +1,13 @@
 <?php
+
+use Mailtrap\Helper\ResponseHelper;
+use Mailtrap\MailtrapClient;
+use Mailtrap\Mime\MailtrapEmail;
+use Symfony\Component\Mime\Address;
+
+require __DIR__ . '/vendor/autoload.php';
+
+// Завантаження .env (не обов'язково, але гарна практика)
 function loadEnv($path)
 {
     if (!file_exists($path)) {
@@ -17,36 +26,35 @@ function loadEnv($path)
 
 loadEnv(__DIR__ . '/../.env');
 
-$botToken = getenv('TELEGRAM_BOT_TOKEN');
-$chatId = getenv('CHAT_ID');
+$apiKey = getenv('MAILTRAP_API_TOKEN'); // твій токен з .env
+$toEmail = getenv('MAILTRAP_TO_EMAIL'); // кому надсилати
+$fromEmail = getenv('MAILTRAP_FROM_EMAIL'); // від кого (повинен бути схвалений у Mailtrap)
 
-if (!$botToken || !$chatId) {
-    die('Ошибка: не удалось получить токен или ID чата.');
-}
-
-$name = isset($_POST['username']) ? $_POST['username'] : 'Не має';
-$phone = isset($_POST['phone']) ? $_POST['phone'] : 'Не має';
+$name = isset($_POST['username']) ? $_POST['username'] : 'Не вказано';
+$phone = isset($_POST['phone']) ? $_POST['phone'] : 'Не вказано';
 
 $text = "Заявка з сайту:\n\n";
-$text .= "Імя: $name\n";
+$text .= "Ім’я: $name\n";
 $text .= "Телефон: $phone\n";
 
-$url = "https://api.telegram.org/bot$botToken/sendMessage?chat_id=$chatId&text=" . urlencode($text);
+// Ініціалізація Mailtrap API
+$mailtrap = MailtrapClient::initSendingEmails(
+    apiKey: $apiKey,
+);
 
-$ch = curl_init($url);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-$response = curl_exec($ch);
+// Формування листа
+$email = (new MailtrapEmail())
+    ->from(new Address($fromEmail, 'Форма сайту'))
+    ->to(new Address($toEmail))
+    ->subject('Нова заявка з сайту')
+    ->text($text)
+    ->category('Заявки');
 
-if (curl_errno($ch)) {
-    echo 'Ошибка cURL: ' . curl_error($ch);
-} else {
-    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    if ($httpCode == 200) {
-        echo 'Сообщение успешно отправлено.';
-    } else {
-        echo 'Ошибка: не удалось отправить сообщение. Код ошибки: ' . $httpCode;
-    }
+// Надсилання
+try {
+    $response = $mailtrap->send($email);
+    $result = ResponseHelper::toArray($response);
+    echo 'Лист успішно надіслано.';
+} catch (Exception $e) {
+    echo 'Помилка при надсиланні: ' . $e->getMessage();
 }
-
-curl_close($ch);
-?>

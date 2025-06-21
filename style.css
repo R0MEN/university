@@ -11,10 +11,7 @@ body {
 	font-family: "Inter", sans-serif;
 }
 
-body.active-modal {
-	overflow: hidden;
-	padding-right: 8px;
-}
+/* ...existing code... */
 
 body::-webkit-scrollbar {
 	background: #ffffff;
@@ -22,7 +19,14 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-	background: black;
+	background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+	border-radius: 8px;
+}
+
+/* Для Firefox */
+body {
+	scrollbar-color: #ffd700 #ffffff;
+	scrollbar-width: thin;
 }
 
 .logo {
@@ -85,6 +89,15 @@ a {
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
+	transition: all 0.5s ease;
+}
+
+.btn:hover {
+	background: #baffb2;
+	color: white;
+	transition: all 0.5s ease;
+	border:2px solid #baffb2;
+	box-shadow: 0 0 16px 0 #baffb2;
 }
 
 .btn img {
@@ -285,6 +298,17 @@ header li img {
 	margin-top: 40px;
 }
 
+.choose img {
+	max-width: 450px;
+}
+
+@media screen and (max-width: 768px) {
+	.choose img {
+		max-width: 100%;
+	}
+
+}
+
 
 /* contact */
 .contacts {
@@ -317,7 +341,7 @@ header li img {
 .contacts-wapper {
 	display: flex;
 	align-items: center;
-	flex-wrap: wrap;
+	flex-wrap: wrap-reverse;
 	gap: 80px;
 }
 
@@ -326,6 +350,10 @@ header li img {
 	gap: 20px;
 	display: flex;
 	flex-direction: column;
+}
+
+.contacts-list h2 {
+	margin: 0 0;
 }
 
 .form-container {
@@ -748,6 +776,14 @@ input[type="checkbox"] {
 	max-width: 1120px;
 	margin: 0 auto;
 }
+
+@media all and (max-width: 768px) {
+	.immigration .universities-grid {
+		margin-top: 20px;
+		gap: 50px;
+	}
+}
+
 
 /* Fixed phone call */
 
