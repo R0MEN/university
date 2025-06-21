@@ -92,13 +92,31 @@ a {
 	transition: all 0.5s ease;
 }
 
-.btn:hover {
+.whatsapp {
+	border-radius: 50px;
+	border: 2px solid #67c15e;
+	background: none;
+	display: inline-flex;
+	padding: 8px 22px 8px 23px;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+	color: #000;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	transition: all 0.5s ease;
+}
+
+.whatsapp:hover {
 	background: #baffb2;
 	color: white;
 	transition: all 0.5s ease;
-	border:2px solid #baffb2;
+	border: 2px solid #baffb2;
 	box-shadow: 0 0 16px 0 #baffb2;
 }
+
 
 .btn img {
 	width: 25px;
