@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
 	margin: 0;
@@ -52,10 +51,16 @@ html {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	gap: 40px;
+	gap: 35px;
 }
 
 .container {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.max-container {
 	max-width: 1320px;
 	padding: 0 15px;
 	margin: 0 auto;
@@ -68,7 +73,7 @@ a {
 
 .btn {
 	border-radius: 50px;
-	border: 2px solid #67C15E;
+	border: 2px solid #67c15e;
 	background: none;
 	display: inline-flex;
 	padding: 8px 22px 8px 23px;
@@ -98,7 +103,7 @@ h2 {
 
 header,
 footer {
-	padding: 15px 0;
+	padding: 5px 0;
 	background: white;
 }
 
@@ -205,12 +210,17 @@ header li img {
 
 /* Hero */
 .hero {
-	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(assets/images/bg.webp) no-repeat center center / cover;
-	height: 720px;
+	background:
+		linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url(assets/images/bg.webp) no-repeat 30% center / cover;
+	height: 100%;
+	min-height: calc(100vh - 70px);
+	min-height: calc(100dvh - 70px);
 	display: flex;
 	justify-content: center;
 	text-align: center;
 	align-items: center;
+	padding: 80px 0;
 }
 
 .img-wrapper {
@@ -225,7 +235,7 @@ header li img {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	color: #FFF;
+	color: #fff;
 	font-size: 48px;
 	font-style: normal;
 	font-weight: 700;
@@ -233,7 +243,7 @@ header li img {
 }
 
 .hero__sub-text {
-	color: #FFF;
+	color: #fff;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 700;
@@ -241,8 +251,9 @@ header li img {
 	max-width: 551px;
 }
 
-.hero__cta {
-	width: 320px;
+.cta {
+	width: 100%;
+	max-width: 320px;
 	height: 48px;
 	color: #000;
 	text-align: center;
@@ -251,9 +262,15 @@ header li img {
 	font-weight: 700;
 	line-height: normal;
 	border-radius: 50px;
-	background: #FC0;
+	background: #fc0;
 	border: none;
 	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.cta:hover {
+	transform: translateY(-3px);
+	box-shadow: 1px 1px 4px gainsboro;
 }
 
 /* Study */
@@ -290,17 +307,8 @@ header li img {
 	max-width: 514px;
 }
 
-.study h2 {
-	color: #000;
-	text-align: center;
-	font-size: 36px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-}
-
 .study h3 {
-	color: #0054C1;
+	color: #0054c1;
 	text-align: center;
 	font-size: 28px;
 	font-style: normal;
@@ -321,11 +329,13 @@ header li img {
 	align-items: flex-start;
 	justify-content: center;
 	width: 100%;
+	flex-wrap: wrap;
 }
 
 .study img {
-	width: 511px;
-	height: 320px;
+	max-width: 511px;
+	width: 100%;
+	height: auto;
 	aspect-ratio: 511/320;
 	border-radius: 20px;
 	object-fit: cover;
@@ -343,8 +353,8 @@ header li img {
 .universities-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    column-gap: 20px;
-    row-gap: 60px;
+	column-gap: 20px;
+	row-gap: 60px;
 	max-width: 1120px;
 	margin: 0 auto;
 }
@@ -352,11 +362,14 @@ header li img {
 .university-card {
 	max-width: 360px;
 	background: white;
+	margin: 0 auto;
 	border-radius: 16px;
 	padding: 30px;
 	text-align: center;
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease;
 	border: 1px solid #e9ecef;
 }
 
@@ -406,7 +419,7 @@ header li img {
 	object-position: center;
 	display: block;
 	border-radius: 50%;
-	transform: scale(1.50);
+	transform: scale(1.5);
 }
 
 .university-logo img {
@@ -432,9 +445,12 @@ header li img {
 }
 
 @media (max-width: 768px) {
+	.hero__main-text {
+		font-size: 32px;
+	}
 	.universities-grid {
 		grid-template-columns: 1fr;
-		gap: 20px;
+		gap: 60px;
 	}
 
 	.university-card {
@@ -450,6 +466,128 @@ header li img {
 	.universities-grid {
 		grid-template-columns: repeat(3, 1fr);
 	}
+}
+
+/* careers */
+
+.career {
+	background: #f0f7ff;
+	padding: 70px 0 80px 0;
+}
+
+.career-wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 80px;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.career-wrapper h3 {
+	color: #0054c1;
+	text-align: center;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.career-slider {
+	max-width: 500px;
+	width: 100%;
+}
+
+.career-wrapper .study-wrapper {
+	max-width: 500px;
+	width: 100%;
+}
+
+.swiper-container {
+	margin-left: 0;
+	margin-right: 0;
+	display: block;
+	height: 349px;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	position: relative;
+}
+
+.swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	height: 400px;
+	text-align: center;
+	position: relative;
+}
+
+.swiper-slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.swiper-pagination {
+	position: absolute !important;
+	bottom: 15px !important;
+	left: 50% !important;
+	transform: translateX(-50%) !important;
+	text-align: center !important;
+	z-index: 10 !important;
+	width: auto !important;
+	height: auto !important;
+}
+
+.swiper-pagination-bullet {
+	width: 12px !important;
+	height: 12px !important;
+	border-radius: 50% !important;
+	background-color: rgba(255, 255, 255, 0.6) !important;
+	opacity: 1 !important;
+	margin: 0 5px !important;
+	transition: all 0.3s ease !important;
+	border: 2px solid rgba(255, 255, 255, 0.8) !important;
+	display: inline-block !important;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: #ffd700 !important;
+	opacity: 1 !important;
+	transform: scale(1.3) !important;
+	border: 2px solid #ffd700 !important;
+}
+
+/* Додаткові стилі для гарного вигляду */
+.slide-content {
+	padding: 20px;
+}
+
+.slide-title {
+	font-size: 28px;
+	margin-bottom: 10px;
+}
+
+.slide-subtitle {
+	font-size: 16px;
+	opacity: 0.8;
+}
+
+/* immigration */
+
+.immigration {
+	margin: 120px 0;
+}
+
+.imenigration p {
+	max-width: 600px;
 }
 
 /* Fixed phone call */
@@ -468,7 +606,8 @@ header li img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 2px solid black;
+	border: 1px solid gainsboro;
+	border-radius: 100%;
 }
 
 .phone-call img {
@@ -478,7 +617,7 @@ header li img {
 
 /* Media querys */
 
-@media all and (max-width: 1124px) {
+@media all and (max-width: 1200px) {
 	body.active-modal {
 		padding: 0;
 	}
@@ -522,16 +661,18 @@ header li img {
 }
 
 @media all and (max-width: 768px) {
+	h2 {
+		font-size: 32px;
+	}
 	header .btn {
 		font-size: 14px;
 	}
-}
-
-@media all and (max-width: 480px) {
-
-	.logo,
-	.logo img {
-		height: 32px;
+	.career-wrapper {
+		gap: 40px;
+	}
+	.career .cta,
+	.immigration .cta {
+		max-width: 500px;
 	}
 }
 
@@ -590,6 +731,10 @@ header li img {
 		gap: 40px;
 		justify-content: center;
 		flex-wrap: wrap;
+	}
+
+	.study_cta {
+		margin: 0 auto;
 	}
 }
 

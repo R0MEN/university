@@ -9,10 +9,13 @@
 	<title>Лікар-хірург | Лікар-нейрохірург - Операції та консультації</title>
 	<meta name="description"
 		content="Професійна хірургічна та нейрохірургічна допомога. Видалення гриж, доброякісних новоутворень, операції на хребті та головному мозку.">
+
 	<meta name="keywords"
 		content="хірург, нейрохірург, операції, видалення гриж, лапароскопія, хребет, головний мозок, менінгіома, гліобластома">
 	<meta name="author" content="Лікар-хірург | Лікар-нейрохірург">
 	<meta name="robots" content="index, follow">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<link rel="canonical" href="https://yourwebsite.com">
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -39,7 +42,7 @@
 
 <body>
 	<header id="home">
-		<div class="container">
+		<div class="max-container">
 			<div class="row">
 				<a href="/" class="logo">
 					<img src="/assets/icons/logo1.webp" alt="logo">
@@ -53,8 +56,9 @@
 						<li><a href="/#Universities">Universities</a></li>
 						<li><a href="/#Contacts">Contacts</a></li>
 						<li class="row">
-							<button id="open-modal" class="btn"><img src="assets/icons/whatsapp.svg">+123 (456)
-								7890</button>
+							<a href="tel:+1234567890" class="btn"><img src="assets/icons/whatsapp.svg">+123
+								(456)
+								7890</a>
 						</li>
 					</ul>
 				</nav>
@@ -73,24 +77,21 @@
 		<section class="hero">
 			<div class="container">
 				<div class="img-wrapper">
-					<div class="hero__main-text">
-						<span>Your Gateway</span>
-						<span>
-							to Quality Education in Ukraine
-						</span>
-					</div>
+					<h1 class="hero__main-text">
+						Your Gateway <br> to Quality Education in Ukraine
+					</h1>
 					<div class="hero__sub-text">
 						Professional legal assistance for students, immigration services, and work permits. Start your
 						journey to success with our expert guidance.
 					</div>
-					<button class="btn hero__cta" onclick="location.href='#contacts'">Get free consultation</button>
+					<button class="btn cta" id="open-modal">Get free consultation</button>
 				</div>
 			</div>
 		</section>
 
 		<section class="study">
 			<div class="container">
-				<h2 class="study-section-title">Top Ukrainian Universities - Your Path to Success</h2>
+				<h2>Top Ukrainian Universities - Your Path to Success</h2>
 				<div class="study-wrapper">
 					<div class="study-section-row">
 						<div class="study-about">
@@ -105,7 +106,7 @@
 								<li>Cultural exchange programs</li>
 							</ul>
 						</div>
-						<button class="btn hero__cta study_cta" onclick="location.href='#contacts'">Get free
+						<button class="btn cta study_cta" onclick="location.href='#contacts'">Get free
 							consultation</button>
 					</div>
 
@@ -157,8 +158,7 @@
 
 						<div class="university-card">
 							<div class="university-logo">
-								<img src="assets/images/univer5.webp"
-									alt="Bogomolets National University Logo">
+								<img src="assets/images/univer5.webp" alt="Bogomolets National University Logo">
 							</div>
 							<h3 class="university-name">Bogomolets National University</h3>
 							<p class="university-description">
@@ -178,12 +178,131 @@
 							</p>
 						</div>
 					</div>
+				</div>
 		</section>
+
+		<section class="career">
+			<div class="container">
+				<h2>Build Your Career in Ukraine</h2>
+				<div class="career-wrapper">
+					<div class="career-slider">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop"
+										alt="Landscape 1">
+								</div>
+								<div class="swiper-slide">
+									<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop"
+										alt="Beach">
+								</div>
+								<div class="swiper-slide">
+									<img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&h=600&fit=crop"
+										alt="Mountain">
+								</div>
+								<div class="swiper-slide">
+									<img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=600&fit=crop"
+										alt="Stars">
+								</div>
+								<div class="swiper-slide">
+									<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop"
+										alt="Forest">
+								</div>
+							</div>
+
+							<!-- Пагінація (індикатори) -->
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+					<div class="study-wrapper">
+						<div class="study-section-row">
+							<div class="study-about">
+								<h3>Professional Work Opportunities</h3>
+								<p>Ukraine offers growing opportunities for international professionals.
+									We assist with:</p>
+								<ul>
+									<li>Work permit applications</li>
+									<li>Employment visa processing</li>
+									<li>Job placement assistance</li>
+									<li>Legal documentation support</li>
+									<li>Employer relations</li>
+								</ul>
+							</div>
+
+							<p>Popular sectors include IT, engineering, education, healthcare, and business services.
+							</p>
+							<button class="btn cta study_cta" id="open-modal">Get free
+								consultation</button>
+						</div>
+
+					</div>
+				</div>
+
+		</section>
+
+		<section class="immigration">
+			<div class="container">
+				<h2>Build Your Career in Ukraine</h2>
+				<div class="career-wrapper">
+					<div class="study-wrapper">
+						<div class="study-section-row">
+							<div class="study-about">
+								<h3>Professional Work Opportunities</h3>
+								<p>Ukraine offers growing opportunities for international professionals.
+									We assist with:</p>
+								<ul>
+									<li>Work permit applications</li>
+									<li>Employment visa processing</li>
+									<li>Job placement assistance</li>
+									<li>Legal documentation support</li>
+									<li>Employer relations</li>
+								</ul>
+							</div>
+
+							<p>Popular sectors include IT, engineering, education, healthcare, and business services.
+							</p>
+							<button class="btn cta study_cta" id="open-modal">Get free
+								consultation</button>
+						</div>
+
+					</div>
+					<div class="career-slider">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop"
+										alt="Landscape 1">
+								</div>
+								<div class="swiper-slide">
+									<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop"
+										alt="Beach">
+								</div>
+								<div class="swiper-slide">
+									<img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&h=600&fit=crop"
+										alt="Mountain">
+								</div>
+								<div class="swiper-slide">
+									<img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=600&fit=crop"
+										alt="Stars">
+								</div>
+								<div class="swiper-slide">
+									<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop"
+										alt="Forest">
+								</div>
+							</div>
+
+							<!-- Пагінація (індикатори) -->
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+		</section>
+
 
 	</main>
 
 	<footer id="contacts">
-		<div class="container">
+		<div class="max-container">
 			<div class="footer__wrapper row">
 				<a href="/" class="logo">
 					<img src="/assets/icons/logo.svg" alt="logo">
@@ -200,7 +319,7 @@
 
 	<div class="phone-call-wrapper">
 		<a href="tel:+380980275819" class="phone-call">
-			<img src="/assets/icons/phone.svg" alt="phone">
+			<img src="/assets/icons/whatsapp.svg" alt="phone">
 		</a>
 	</div>
 
@@ -230,6 +349,52 @@
 
 	<script>
 		AOS.init();
+		const swiper = new Swiper('.swiper-container', {
+			// Основні параметри
+			direction: 'horizontal',
+			loop: false,
+
+			// Пагінація
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+				dynamicBullets: false,
+			},
+
+			// Ефекти переходу
+			effect: 'slide',
+			speed: 300,
+
+			// Тач-події
+			touchRatio: 1,
+			touchAngle: 45,
+
+			// Клавіатура
+			keyboard: {
+				enabled: true,
+			},
+
+			// Mousewheel
+			mousewheel: {
+				enabled: true,
+			},
+
+			// Responsive breakpoints
+			breakpoints: {
+				640: {
+					slidesPerView: 1,
+					spaceBetween: 20,
+				},
+				768: {
+					slidesPerView: 1,
+					spaceBetween: 30,
+				},
+				1024: {
+					slidesPerView: 1,
+					spaceBetween: 40,
+				},
+			},
+		});
 	</script>
 </body>
 
