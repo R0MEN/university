@@ -1,6 +1,12 @@
+/* ===============================
+   FONTS
+   =============================== */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/* ===============================
+   RESET & BASE STYLES
+   =============================== */
 * {
 	margin: 0;
 	padding: 0;
@@ -11,8 +17,19 @@ body {
 	font-family: "Inter", sans-serif;
 }
 
-/* ...existing code... */
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 20px;
+}
 
+a {
+	text-decoration: none;
+	cursor: pointer !important;
+}
+
+/* ===============================
+   SCROLLBAR STYLES
+   =============================== */
 body::-webkit-scrollbar {
 	background: #ffffff;
 	width: 8px;
@@ -23,10 +40,143 @@ body::-webkit-scrollbar-thumb {
 	border-radius: 8px;
 }
 
-/* Для Firefox */
 body {
 	scrollbar-color: #ffd700 #ffffff;
 	scrollbar-width: thin;
+}
+
+/* ===============================
+   LAYOUT COMPONENTS
+   =============================== */
+.container {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.max-container {
+	max-width: 1320px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 35px;
+}
+
+/* ===============================
+   TYPOGRAPHY
+   =============================== */
+h1 {
+	color: #000;
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+h2 {
+	font-weight: 600;
+	text-align: center;
+	font-size: 32px;
+	margin-bottom: 40px;
+}
+
+/* ===============================
+   BUTTONS
+   =============================== */
+.btn {
+	border-radius: 50px;
+	border: 2px solid #67c15e;
+	background: none;
+	display: inline-flex;
+	padding: 8px 22px 8px 23px;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+	color: #000;
+	font-size: 18px;
+	font-weight: 500;
+	transition: all 0.5s ease;
+}
+
+.btn img {
+	width: 25px;
+	height: 25px;
+}
+
+.whatsapp {
+	border-radius: 50px;
+	border: 2px solid #67c15e;
+	background: none;
+	display: inline-flex;
+	padding: 8px 22px 8px 23px;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+	color: #000;
+	font-size: 18px;
+	font-weight: 500;
+	transition: all 0.5s ease;
+}
+
+.whatsapp:hover {
+	background: #baffb2;
+	color: white;
+	border: 2px solid #baffb2;
+	box-shadow: 0 0 16px 0 #baffb2;
+}
+
+.cta {
+	width: 100%;
+	max-width: 320px;
+	height: 48px;
+	color: #000;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 700;
+	border-radius: 50px;
+	background: #fc0;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.cta:hover {
+	transform: translateY(-3px);
+	box-shadow: 1px 1px 4px gainsboro;
+}
+
+.submit-btn {
+	width: 100%;
+	background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+	color: #000;
+	border: none;
+	padding: 14px;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+
+.submit-btn:hover {
+	transform: translateY(-2px);
+}
+
+.submit-btn:active {
+	transform: translateY(0);
+}
+
+/* ===============================
+   HEADER
+   =============================== */
+header {
+	padding: 5px 0;
+	background: white;
 }
 
 .logo {
@@ -44,98 +194,6 @@ body {
 .logo img {
 	width: 60px;
 	height: 60px;
-}
-
-html {
-	scroll-behavior: smooth;
-	scroll-padding-top: 20px;
-}
-
-.row {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 35px;
-}
-
-.container {
-	max-width: 1200px;
-	padding: 0 15px;
-	margin: 0 auto;
-}
-
-.max-container {
-	max-width: 1320px;
-	padding: 0 15px;
-	margin: 0 auto;
-}
-
-a {
-	text-decoration: none;
-	cursor: pointer !important;
-}
-
-.btn {
-	border-radius: 50px;
-	border: 2px solid #67c15e;
-	background: none;
-	display: inline-flex;
-	padding: 8px 22px 8px 23px;
-	justify-content: center;
-	align-items: center;
-	gap: 12px;
-	color: #000;
-	font-size: 18px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
-	transition: all 0.5s ease;
-}
-
-.whatsapp {
-	border-radius: 50px;
-	border: 2px solid #67c15e;
-	background: none;
-	display: inline-flex;
-	padding: 8px 22px 8px 23px;
-	justify-content: center;
-	align-items: center;
-	gap: 12px;
-	color: #000;
-	font-size: 18px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
-	transition: all 0.5s ease;
-}
-
-.whatsapp:hover {
-	background: #baffb2;
-	color: white;
-	transition: all 0.5s ease;
-	border: 2px solid #baffb2;
-	box-shadow: 0 0 16px 0 #baffb2;
-}
-
-
-.btn img {
-	width: 25px;
-	height: 25px;
-}
-
-h2 {
-	font-weight: 600;
-	text-align: center;
-	font-size: 32px;
-	margin-bottom: 40px;
-}
-
-/* Header */
-
-header,
-footer {
-	padding: 5px 0;
-	background: white;
 }
 
 header li.row {
@@ -165,11 +223,8 @@ header li img {
 .header__menu-list a {
 	color: #000;
 	text-align: center;
-	font-family: Inter;
 	font-size: 18px;
-	font-style: normal;
 	font-weight: 700;
-	line-height: normal;
 	position: relative;
 	overflow: hidden;
 }
@@ -186,10 +241,6 @@ header li img {
 	transition: width 0.4s cubic-bezier(0.77, 0, 0.175, 1);
 	bottom: -4px;
 	border-radius: 2px;
-}
-
-.header__menu-list a:hover::after {
-	width: 100%;
 }
 
 .header__menu-list a:hover::after {
@@ -239,10 +290,11 @@ header li img {
 	transform: rotate(-45deg) translate(6px, -7px);
 }
 
-/* Hero */
+/* ===============================
+   HERO SECTION
+   =============================== */
 .hero {
-	background:
-		linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 		url(assets/images/bg.webp) no-repeat 30% center / cover;
 	height: 100%;
 	min-height: calc(100vh - 70px);
@@ -268,44 +320,19 @@ header li img {
 	align-items: center;
 	color: #fff;
 	font-size: 48px;
-	font-style: normal;
 	font-weight: 700;
-	line-height: normal;
 }
 
 .hero__sub-text {
 	color: #fff;
 	font-size: 18px;
-	font-style: normal;
 	font-weight: 700;
-	line-height: normal;
 	max-width: 551px;
 }
 
-.cta {
-	width: 100%;
-	max-width: 320px;
-	height: 48px;
-	color: #000;
-	text-align: center;
-	font-size: 18px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-	border-radius: 50px;
-	background: #fc0;
-	border: none;
-	cursor: pointer;
-	transition: all 0.3s;
-}
-
-.cta:hover {
-	transform: translateY(-3px);
-	box-shadow: 1px 1px 4px gainsboro;
-}
-
-/* choose */
-
+/* ===============================
+   CHOOSE SECTION
+   =============================== */
 .choose {
 	background: #F0F7FF;
 	padding: 70px 0 80px 0;
@@ -320,149 +347,18 @@ header li img {
 	max-width: 450px;
 }
 
-@media screen and (max-width: 768px) {
-	.choose img {
-		max-width: 100%;
-	}
-
-}
-
-
-/* contact */
-.contacts {
-	margin: 120px 0;
-}
-
-.contacts iframe {
-	max-width: 590px;
-	max-height: 358px;
-	border-radius: 20px;
-}
-
-.contacts h2 {
-	text-align: left;
-}
-
-.contacts-list p {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-}
-
-.contacts-list p img {
-	height: 32px;
-	width: 32px;
-	vertical-align: middle;
-	display: inline-block;
-}
-
-.contacts-wapper {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap-reverse;
-	gap: 80px;
-}
-
-.contacts-list {
-	max-width: 500px;
-	gap: 20px;
-	display: flex;
-	flex-direction: column;
-}
-
-.contacts-list h2 {
-	margin: 0 0;
-}
-
-.form-container {
-	background: #D9E8FF;
-	backdrop-filter: blur(10px);
-	border-radius: 20px;
-	padding: 40px 30px;
-	width: 100%;
-	max-width: 470px;
-	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-	color: #000;
-	font-size: 24px;
-	font-weight: 600;
-	margin-bottom: 30px;
-	text-align: center;
-}
-
-.form-group {
-	margin-bottom: 20px;
-}
-
-input,
-select,
-textarea {
-	width: 100%;
-	padding: 12px 16px;
-	border: 2px solid #e2e8f0;
-	border-radius: 8px;
-	font-size: 16px;
-	transition: border-color 0.3s ease;
-	background: white;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-	outline: none;
-	border-color: #667eea;
-}
-
-textarea {
-	resize: vertical;
-	height: 80px;
-}
-
-.checkbox-container {
-	display: flex;
-	align-items: flex-start;
-	gap: 10px;
-	margin: 25px 0;
-}
-
-input[type="checkbox"] {
-	width: auto;
-	margin-top: 2px;
-}
-
-.checkbox-label {
-	font-size: 14px;
-	color: #4a5568;
-	line-height: 1.4;
-}
-
-.submit-btn {
-	width: 100%;
-	background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-	color: #000;
-	border: none;
-	padding: 14px;
-	border-radius: 8px;
-	font-size: 16px;
-	font-weight: 600;
-	cursor: pointer;
-	transition: transform 0.2s ease;
-}
-
-.submit-btn:hover {
-	transform: translateY(-2px);
-}
-
-.submit-btn:active {
-	transform: translateY(0);
-}
-
-/* Study */
-
+/* ===============================
+   STUDY SECTION
+   =============================== */
 .study {
 	margin: 120px 0;
+}
+
+.study h3 {
+	color: #0054c1;
+	text-align: center;
+	font-size: 28px;
+	font-weight: 700;
 }
 
 .study-section-row {
@@ -478,6 +374,8 @@ input[type="checkbox"] {
 	align-items: flex-start;
 	text-align: left;
 	gap: 15px;
+	font-size: 18px;
+	font-weight: 300;
 }
 
 .study-about h3 {
@@ -491,22 +389,6 @@ input[type="checkbox"] {
 
 .study-about p {
 	max-width: 514px;
-}
-
-.study h3 {
-	color: #0054c1;
-	text-align: center;
-	font-size: 28px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-}
-
-.study-about {
-	font-size: 18px;
-	font-style: normal;
-	font-weight: 300;
-	line-height: normal;
 }
 
 .study-wrapper {
@@ -530,8 +412,9 @@ input[type="checkbox"] {
 	background-repeat: no-repeat;
 }
 
-/* Universities */
-
+/* ===============================
+   UNIVERSITIES SECTION
+   =============================== */
 .universityes-wrapper {
 	margin: 100px 0;
 }
@@ -553,28 +436,8 @@ input[type="checkbox"] {
 	padding: 30px;
 	text-align: center;
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-	transition:
-		transform 0.3s ease,
-		box-shadow 0.3s ease;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	border: 1px solid #e9ecef;
-}
-
-.university-card h3 {
-	color: #000;
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-}
-
-.university-card p {
-	color: #000;
-	text-align: center;
-	font-size: 18px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-	max-width: 320px;
 }
 
 .university-card:hover {
@@ -582,10 +445,24 @@ input[type="checkbox"] {
 	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
+.university-card h3 {
+	color: #000;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.university-card p {
+	color: #000;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 400;
+	max-width: 320px;
+}
+
 .university-logo {
 	width: 90px;
 	height: 90px;
-	margin: -70px auto 20px;
+	margin: -60px auto 20px;
 	border-radius: 50%;
 	background-color: white;
 	display: flex;
@@ -599,20 +476,13 @@ input[type="checkbox"] {
 }
 
 .university-logo img {
-	width: 130%;
-	height: 130%;
+	width: 100px;
+	height: 100px;
 	object-fit: cover;
 	object-position: center;
 	display: block;
-	border-radius: 50%;
-	transform: scale(1.5);
 }
 
-.university-logo img {
-	width: 60px;
-	height: 60px;
-	object-fit: contain;
-}
 
 .university-name {
 	font-size: 20px;
@@ -630,33 +500,9 @@ input[type="checkbox"] {
 	margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-	.hero__main-text {
-		font-size: 32px;
-	}
-
-	.universities-grid {
-		grid-template-columns: 1fr;
-		gap: 60px;
-	}
-
-	.university-card {
-		padding: 25px;
-	}
-
-	.university-name {
-		font-size: 18px;
-	}
-}
-
-@media (min-width: 1024px) {
-	.universities-grid {
-		grid-template-columns: repeat(3, 1fr);
-	}
-}
-
-/* careers */
-
+/* ===============================
+   CAREER SECTION
+   =============================== */
 .career {
 	background: #f0f7ff;
 	padding: 70px 0 80px 0;
@@ -676,9 +522,7 @@ input[type="checkbox"] {
 	color: #0054c1;
 	text-align: center;
 	font-size: 28px;
-	font-style: normal;
 	font-weight: 700;
-	line-height: normal;
 }
 
 .career-slider {
@@ -752,7 +596,6 @@ input[type="checkbox"] {
 	border: 2px solid #ffd700 !important;
 }
 
-/* Додаткові стилі для гарного вигляду */
 .slide-content {
 	padding: 20px;
 }
@@ -767,8 +610,9 @@ input[type="checkbox"] {
 	opacity: 0.8;
 }
 
-/* immigration */
-
+/* ===============================
+   IMMIGRATION SECTION
+   =============================== */
 .immigration {
 	margin: 120px 0;
 }
@@ -777,122 +621,122 @@ input[type="checkbox"] {
 	max-width: 265px;
 }
 
-.university-card h3 {
-	color: #000;
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-}
-
 .immigration .universities-grid {
-	display: grid;
-	flex-wrap: wrap;
 	display: flex;
 	justify-content: center;
 	gap: 20px;
 	max-width: 1120px;
 	margin: 0 auto;
+	flex-wrap: wrap;
 }
 
-@media all and (max-width: 768px) {
-	.immigration .universities-grid {
-		margin-top: 20px;
-		gap: 50px;
-	}
+/* ===============================
+   CONTACTS SECTION
+   =============================== */
+.contacts {
+	margin: 120px 0;
 }
 
-
-/* Fixed phone call */
-
-.phone-call-wrapper {
-	position: fixed;
-	bottom: 10px;
-	z-index: 999;
-	right: 10px;
+.contacts h2 {
+	text-align: left;
 }
 
-.phone-call {
-	height: 42px;
-	width: 42px;
-	background: white;
+.contacts iframe {
+	width: 100%;
+	max-height: 300px;
+	border-radius: 20px;
+}
+
+.contacts-wrapper {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	border: 1px solid gainsboro;
-	border-radius: 100%;
+	justify-content: space-between;
+	flex-wrap: wrap-reverse;
+	gap: 70px;
 }
 
-.phone-call img {
-	width: 24px;
-	height: 24px;
+.contacts-list {
+	max-width: 500px;
+	gap: 20px;
+	display: flex;
+	flex-direction: column;
 }
 
-/* Media querys */
-
-@media all and (max-width: 1200px) {
-	body.active-modal {
-		padding: 0;
-	}
-
-	.phone-call-wrapper {
-		display: flex;
-	}
-
-	.header__mobile-nav {
-		display: flex;
-	}
-
-	.header__menu {
-		position: absolute;
-		left: -120%;
-		top: 0;
-		height: 100vh;
-		width: 40vw;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		transition: all 0.3s;
-		z-index: 10;
-		background: white;
-		border-right: 1px solid black;
-	}
-
-	.header__menu li:last-child {
-		display: none;
-	}
-
-	.header__menu.active {
-		left: 0;
-		width: 80vw;
-	}
-
-	.header__menu-list {
-		gap: 60px;
-		flex-direction: column;
-	}
+.contacts-list h2 {
+	margin: 0;
 }
 
-@media all and (max-width: 768px) {
-	h2 {
-		font-size: 32px;
-	}
-
-	header .btn {
-		font-size: 14px;
-	}
-
-	.career-wrapper {
-		gap: 40px;
-	}
-
-	.career .cta,
-	.immigration .cta {
-		max-width: 500px;
-	}
+.contacts-list p {
+	display: flex;
+	align-items: center;
+	gap: 8px;
 }
 
-/* request__wrapper */
+.contacts-list p img {
+	height: 32px;
+	width: 32px;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+/* ===============================
+   FORMS
+   =============================== */
+.form-container {
+	background: #D9E8FF;
+	backdrop-filter: blur(10px);
+	border-radius: 20px;
+	padding: 40px 30px;
+	width: 100%;
+	max-width: 470px;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+input,
+select,
+textarea {
+	width: 100%;
+	padding: 12px 16px;
+	border: 2px solid #e2e8f0;
+	border-radius: 8px;
+	font-size: 16px;
+	transition: border-color 0.3s ease;
+	background: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	outline: none;
+	border-color: #667eea;
+}
+
+textarea {
+	resize: vertical;
+	height: 80px;
+}
+
+.checkbox-container {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	margin: 25px 0;
+}
+
+input[type="checkbox"] {
+	width: auto;
+	margin-top: 2px;
+}
+
+.checkbox-label {
+	font-size: 14px;
+	color: #4a5568;
+	line-height: 1.4;
+}
 
 .request__wrapper {
 	display: flex;
@@ -941,19 +785,9 @@ input[type="checkbox"] {
 	text-align: center;
 }
 
-@media all and (max-width: 768px) {
-	.request__wrapper {
-		display: flex;
-		gap: 40px;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-
-	.study_cta {
-		margin: 0 auto;
-	}
-}
-
+/* ===============================
+   FOOTER
+   =============================== */
 footer {
 	background-color: #2c2c2c;
 	color: #ffffff;
@@ -998,32 +832,35 @@ footer {
 	font-size: 14px;
 }
 
-@media (max-width: 768px) {
-	.footer-content {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 30px;
-	}
+/* ===============================
+   FIXED PHONE CALL
+   =============================== */
+.phone-call-wrapper {
+	position: fixed;
+	bottom: 10px;
+	z-index: 999;
+	right: 10px;
 }
 
-@media (max-width: 480px) {
-	.footer-content {
-		grid-template-columns: 1fr;
-		gap: 20px;
-	}
+.phone-call {
+	height: 42px;
+	width: 42px;
+	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid gainsboro;
+	border-radius: 100%;
 }
 
-@media all and (max-width: 768px) {
-	footer {
-		padding: 60px 0;
-	}
-
-	.footer__wrapper,
-	.footer__contacts {
-		flex-direction: column;
-		justify-content: center;
-	}
+.phone-call img {
+	width: 24px;
+	height: 24px;
 }
 
+/* ===============================
+   MODAL
+   =============================== */
 .modal {
 	top: 0;
 	left: 0;
@@ -1040,12 +877,21 @@ footer {
 	justify-content: center;
 }
 
+.modal.active {
+	z-index: 9999;
+	opacity: 1;
+}
+
 .modal__window {
 	background: white;
 	padding: 30px;
 	position: relative;
 	transition: all 0.3s;
 	transform: scale(0.1);
+}
+
+.modal.active .modal__window {
+	transform: scale(1);
 }
 
 #close-modal {
@@ -1062,11 +908,129 @@ footer {
 	cursor: pointer;
 }
 
-.modal.active {
-	z-index: 9999;
-	opacity: 1;
+/* ===============================
+   MEDIA QUERIES
+   =============================== */
+@media screen and (max-width: 1200px) {
+	body.active-modal {
+		padding: 0;
+	}
+
+	.phone-call-wrapper {
+		display: flex;
+	}
+
+	.header__mobile-nav {
+		display: flex;
+	}
+
+	.header__menu {
+		position: absolute;
+		left: -120%;
+		top: 0;
+		height: 100vh;
+		width: 40vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.3s;
+		z-index: 10;
+		background: white;
+		border-right: 1px solid black;
+	}
+
+	.header__menu.active {
+		left: 0;
+		width: 80vw;
+	}
+
+	.header__menu li:last-child {
+		display: none;
+	}
+
+	.header__menu-list {
+		gap: 60px;
+		flex-direction: column;
+	}
 }
 
-.modal.active .modal__window {
-	transform: scale(1);
+@media screen and (max-width: 1024px) {
+	.universities-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	h2 {
+		font-size: 32px;
+	}
+
+	.hero__main-text {
+		font-size: 32px;
+	}
+
+	.choose img {
+		max-width: 100%;
+	}
+
+	header .btn {
+		font-size: 14px;
+	}
+
+	.career-wrapper {
+		gap: 40px;
+	}
+
+	.career .cta,
+	.immigration .cta {
+		max-width: 500px;
+	}
+
+	.universities-grid {
+		grid-template-columns: 1fr;
+		gap: 60px;
+	}
+
+	.university-card {
+		padding: 25px;
+	}
+
+	.university-name {
+		font-size: 18px;
+	}
+
+	.immigration .universities-grid {
+		margin-top: 20px;
+		gap: 50px;
+	}
+
+	.request__wrapper {
+		gap: 40px;
+	}
+
+	.study_cta {
+		margin: 0 auto;
+	}
+
+	footer {
+		padding: 60px 0;
+	}
+
+	.footer-content {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px;
+	}
+
+	.footer__wrapper,
+	.footer__contacts {
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.footer-content {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
 }
