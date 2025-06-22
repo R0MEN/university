@@ -81,7 +81,7 @@ h1 {
 h2 {
 	font-weight: 600;
 	text-align: center;
-	font-size: 32px;
+	font-size: 34px;
 	margin-bottom: 40px;
 }
 
@@ -520,7 +520,6 @@ header li img {
 
 .career-wrapper h3 {
 	color: #0054c1;
-	text-align: center;
 	font-size: 28px;
 	font-weight: 700;
 }
@@ -621,6 +620,12 @@ header li img {
 	max-width: 265px;
 }
 
+.immigration .university-card h3 {
+	color: #000;
+	font-size: 20px;
+	font-weight: 700;
+}
+
 .immigration .universities-grid {
 	display: flex;
 	justify-content: center;
@@ -650,9 +655,8 @@ header li img {
 .contacts-wrapper {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 	flex-wrap: wrap-reverse;
-	gap: 70px;
+	gap: 90px;
 }
 
 .contacts-list {
@@ -925,7 +929,7 @@ footer {
 	}
 
 	.header__menu {
-		position: absolute;
+		position: fixed;
 		left: -120%;
 		top: 0;
 		height: 100vh;
