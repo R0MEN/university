@@ -1,0 +1,29 @@
+{
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+
+    "name": "kozin/starter-vanilla-landing",
+    "autoload": {
+        "psr-4": {
+            "Kozin\\StarterVanillaLanding\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "R0MEN",
+            "email": "kozinaroman7@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/mime": "^7.3",
+        "maildrop/maildrop-php": "^1.4",
+        "railsware/mailtrap-php": "^3.3",
+        "symfony/http-client": "^7.3",
+        "nyholm/psr7": "^1.8"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
