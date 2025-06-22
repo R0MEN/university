@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Thank You - Ukraine Lawyer Immigration</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+			line-height: 1.6;
+			color: #333;
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+		}
+
+		.thank-you {
+			max-width: 600px;
+			width: 100%;
+			background: white;
+			border-radius: 20px;
+			box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+			overflow: hidden;
+			animation: slideUp 0.6s ease-out;
+		}
+
+		@keyframes slideUp {
+			from {
+				opacity: 0;
+				transform: translateY(30px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		.thank-you__header {
+			background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+			color: white;
+			padding: 40px 30px;
+			text-align: center;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.thank-you__header::before {
+			content: '';
+			position: absolute;
+			top: -50%;
+			left: -50%;
+			width: 200%;
+			height: 200%;
+			background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+			background-size: 20px 20px;
+			animation: float 20s infinite linear;
+		}
+
+		@keyframes float {
+			0% {
+				transform: rotate(0deg) translate(-50%, -50%);
+			}
+
+			100% {
+				transform: rotate(360deg) translate(-50%, -50%);
+			}
+		}
+
+		.thank-you__icon {
+			width: 80px;
+			height: 80px;
+			background: rgba(255, 255, 255, 0.2);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 20px;
+			position: relative;
+			z-index: 2;
+			animation: pulse 2s infinite;
+		}
+
+		@keyframes pulse {
+
+			0%,
+			100% {
+				transform: scale(1);
+			}
+
+			50% {
+				transform: scale(1.05);
+			}
+		}
+
+		.thank-you__icon svg {
+			width: 40px;
+			height: 40px;
+			fill: white;
+		}
+
+		.thank-you__title {
+			font-size: 2.5rem;
+			font-weight: 700;
+			margin-bottom: 10px;
+			position: relative;
+			z-index: 2;
+		}
+
+		.thank-you__subtitle {
+			font-size: 1.2rem;
+			opacity: 0.9;
+			position: relative;
+			z-index: 2;
+		}
+
+		.thank-you__content {
+			padding: 40px 30px;
+		}
+
+		.thank-you__message {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		.thank-you__text {
+			font-size: 1.1rem;
+			color: #475569;
+			margin-bottom: 15px;
+			line-height: 1.7;
+		}
+
+		.thank-you__highlight {
+			color: #4f46e5;
+			font-weight: 600;
+		}
+
+		.thank-you__info {
+			background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+			border-radius: 12px;
+			padding: 25px;
+			margin: 30px 0;
+			border-left: 4px solid #4f46e5;
+		}
+
+		.thank-you__info-title {
+			font-size: 1.2rem;
+			font-weight: 600;
+			color: #1e293b;
+			margin-bottom: 15px;
+			display: flex;
+			align-items: center;
+		}
+
+		.thank-you__info-title::before {
+			content: "ℹ️";
+			margin-right: 8px;
+			font-size: 1.1rem;
+		}
+
+		.thank-you__info-list {
+			list-style: none;
+			padding: 0;
+		}
+
+		.thank-you__info-item {
+			display: flex;
+			align-items: flex-start;
+			margin-bottom: 8px;
+			color: #475569;
+		}
+
+		.thank-you__info-item::before {
+			content: "✓";
+			color: #10b981;
+			font-weight: bold;
+			margin-right: 8px;
+			margin-top: 2px;
+			flex-shrink: 0;
+		}
+
+		.thank-you__contact {
+			background: linear-gradient(135deg, #fef3c7 0%, #fbbf24 100%);
+			border-radius: 12px;
+			padding: 25px;
+			margin: 30px 0;
+			text-align: center;
+		}
+
+		.thank-you__contact-title {
+			font-size: 1.2rem;
+			font-weight: 600;
+			color: #92400e;
+			margin-bottom: 15px;
+		}
+
+		.thank-you__contact-info {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 15px;
+			margin-top: 15px;
+		}
+
+		.thank-you__contact-item {
+			background: rgba(255, 255, 255, 0.7);
+			padding: 12px;
+			border-radius: 8px;
+			backdrop-filter: blur(10px);
+		}
+
+		.thank-you__contact-label {
+			font-size: 0.9rem;
+			color: #92400e;
+			margin-bottom: 5px;
+			font-weight: 500;
+		}
+
+		.thank-you__contact-value {
+			font-weight: 600;
+			color: #451a03;
+		}
+
+		.thank-you__contact-link {
+			color: #92400e;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.thank-you__contact-link:hover {
+			text-decoration: underline;
+		}
+
+		.thank-you__actions {
+			display: flex;
+			gap: 15px;
+			justify-content: center;
+			margin-top: 30px;
+			flex-wrap: wrap;
+		}
+
+		.thank-you__button {
+			display: inline-flex;
+			align-items: center;
+			padding: 12px 24px;
+			border-radius: 8px;
+			text-decoration: none;
+			font-weight: 600;
+			transition: all 0.3s ease;
+			border: none;
+			cursor: pointer;
+			font-size: 1rem;
+		}
+
+		.thank-you__button--primary {
+			background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+			color: white;
+			box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+		}
+
+		.thank-you__button--primary:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+		}
+
+		.thank-you__button--secondary {
+			background: white;
+			color: #4f46e5;
+			border: 2px solid #4f46e5;
+		}
+
+		.thank-you__button--secondary:hover {
+			background: #4f46e5;
+			color: white;
+			transform: translateY(-2px);
+		}
+
+		.thank-you__footer {
+			background: #f8fafc;
+			padding: 20px 30px;
+			text-align: center;
+			border-top: 1px solid #e2e8f0;
+		}
+
+		.thank-you__footer-text {
+			color: #64748b;
+			font-size: 0.9rem;
+			margin-bottom: 10px;
+		}
+
+		.thank-you__social {
+			display: flex;
+			justify-content: center;
+			gap: 15px;
+			margin-top: 15px;
+		}
+
+		.thank-you__social-link {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 40px;
+			height: 40px;
+			background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+			color: white;
+			border-radius: 50%;
+			text-decoration: none;
+			transition: all 0.3s ease;
+		}
+
+		.thank-you__social-link:hover {
+			transform: translateY(-2px) scale(1.1);
+			box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+		}
+
+		.thank-you__timeline {
+			background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+			border-radius: 12px;
+			padding: 25px;
+			margin: 30px 0;
+			border-left: 4px solid #10b981;
+		}
+
+		.thank-you__timeline-title {
+			font-size: 1.2rem;
+			font-weight: 600;
+			color: #065f46;
+			margin-bottom: 15px;
+			display: flex;
+			align-items: center;
+		}
+
+		.thank-you__timeline-title::before {
+			content: "⏰";
+			margin-right: 8px;
+			font-size: 1.1rem;
+		}
+
+		.thank-you__timeline-item {
+			display: flex;
+			align-items: flex-start;
+			margin-bottom: 12px;
+			color: #047857;
+		}
+
+		.thank-you__timeline-step {
+			background: #10b981;
+			color: white;
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 0.8rem;
+			font-weight: 600;
+			margin-right: 12px;
+			flex-shrink: 0;
+			margin-top: 2px;
+		}
+
+		@media (max-width: 768px) {
+			.thank-you {
+				margin: 10px;
+				border-radius: 15px;
+			}
+
+			.thank-you__header {
+				padding: 30px 20px;
+			}
+
+			.thank-you__title {
+				font-size: 2rem;
+			}
+
+			.thank-you__content {
+				padding: 30px 20px;
+			}
+
+			.thank-you__actions {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.thank-you__button {
+				width: 100%;
+				max-width: 280px;
+				justify-content: center;
+			}
+
+			.thank-you__contact-info {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		@media (max-width: 480px) {
+			body {
+				padding: 10px;
+			}
+
+			.thank-you__header {
+				padding: 25px 15px;
+			}
+
+			.thank-you__title {
+				font-size: 1.8rem;
+			}
+
+			.thank-you__content {
+				padding: 25px 15px;
+			}
+
+			.thank-you__footer {
+				padding: 15px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<main class="thank-you">
+		<header class="thank-you__header">
+			<div class="thank-you__icon">
+				<svg viewBox="0 0 24 24">
+					<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+				</svg>
+			</div>
+			<h1 class="thank-you__title">Thank You!</h1>
+			<p class="thank-you__subtitle">Your application has been successfully submitted</p>
+		</header>
+
+		<div class="thank-you__content">
+			<div class="thank-you__message">
+				<p class="thank-you__text">
+					We have received your application and are excited to help you begin your educational journey. Our team is
+					already reviewing your information and will contact you soon.
+				</p>
+			</div>
+
+			<div class="thank-you__timeline">
+				<h3 class="thank-you__timeline-title">What Happens Next</h3>
+				<div class="thank-you__timeline-item">
+					<div class="thank-you__timeline-step">1</div>
+					<div>
+						<strong>Initial Review (24-48 hours)</strong><br>
+						Our team will review your application and verify your information
+					</div>
+				</div>
+				<div class="thank-you__timeline-item">
+					<div class="thank-you__timeline-step">2</div>
+					<div>
+						<strong>Personal Consultation (2-3 days)</strong><br>
+						We'll schedule a consultation call to discuss your goals and options
+					</div>
+				</div>
+				<div class="thank-you__timeline-item">
+					<div class="thank-you__timeline-step">3</div>
+					<div>
+						<strong>Application Process</strong><br>
+						Begin the application process to your chosen universities
+					</div>
+				</div>
+			</div>
+
+			<div class="thank-you__info">
+				<h3 class="thank-you__info-title">Important Information</h3>
+				<ul class="thank-you__info-list">
+					<li class="thank-you__info-item">Check your email (including spam folder) for our response</li>
+					<li class="thank-you__info-item">Prepare copies of your academic documents and certificates</li>
+					<li class="thank-you__info-item">Have your passport ready for the consultation call</li>
+					<li class="thank-you__info-item">Think about your preferred study destinations and programs</li>
+					<li class="thank-you__info-item">Consider your budget for tuition and living expenses</li>
+				</ul>
+			</div>
+
+			<div class="thank-you__contact">
+				<h3 class="thank-you__contact-title">Need Immediate Assistance?</h3>
+				<p style="color: #92400e; margin-bottom: 15px;">
+					If you have urgent questions or need to update your information, contact us directly:
+				</p>
+
+				<div class="thank-you__contact-info">
+					<div class="thank-you__contact-item">
+						<div class="thank-you__contact-label">Email:</div>
+						<div class="thank-you__contact-value">
+							<a href="mailto:studyworkinukraine@gmail.com"
+								class="thank-you__contact-link">studyworkinukraine@gmail.com</a>
+						</div>
+					</div>
+
+					<div class="thank-you__contact-item">
+						<div class="thank-you__contact-label">Phone:</div>
+						<div class="thank-you__contact-value">
+							<a href="tel:+14583358096" class="thank-you__contact-link">+1 (458) 335-8096</a>
+						</div>
+					</div>
+
+					<div class="thank-you__contact-item">
+						<div class="thank-you__contact-label">WhatsApp:</div>
+						<div class="thank-you__contact-value">
+							<a href="https://wa.me/14583358096" class="thank-you__contact-link" target="_blank">+1 (458)
+								335-8096</a>
+						</div>
+					</div>
+
+					<div class="thank-you__contact-item">
+						<div class="thank-you__contact-label">Website:</div>
+						<div class="thank-you__contact-value">
+							<a href="https://ukrainelaw.com" class="thank-you__contact-link" target="_blank">ukrainelaw.com</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="thank-you__actions">
+				<a href="/" class="thank-you__button thank-you__button--primary">
+					Return to Homepage
+				</a>
+			</div>
+		</div>
+
+		<footer class="thank-you__footer">
+			<p class="thank-you__footer-text">
+				<strong>Ukraine Lawyer Immigration</strong> - Your trusted partner in educational opportunities
+			</p>
+			<p class="thank-you__footer-text">
+				Business Hours: Monday - Friday, 9:00 AM - 6:00 PM (EST)
+			</p>
+
+			<div class="thank-you__social">
+				<a href="tel:+14583358096" class="thank-you__social-link" title="Phone">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+						<path
+							d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+					</svg>
+				</a>
+				<a href="https://wa.me/14583358096" class="thank-you__social-link" title="WhatsApp" target="_blank">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+						<path
+							d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.106" />
+					</svg>
+				</a>
+			</div>
+		</footer>
+	</main>
+
+	<script>
+		// Generate a random application ID
+		function generateApplicationId() {
+			const numbers = Math.floor(Math.random() * 90000) + 10000;
+			return numbers.toString();
+		}
+
+		// Set the application ID
+		document.getElementById('applicationId').textContent = generateApplicationId();
+
+		// Add some interactive elements
+		document.addEventListener('DOMContentLoaded', function () {
+			// Animate elements on load
+			const elements = document.querySelectorAll('.thank-you__timeline-item, .thank-you__info-item');
+			elements.forEach((element, index) => {
+				element.style.opacity = '0';
+				element.style.transform = 'translateX(-20px)';
+				setTimeout(() => {
+					element.style.transition = 'all 0.6s ease';
+					element.style.opacity = '1';
+					element.style.transform = 'translateX(0)';
+				}, index * 200);
+			});
+
+			// Add click tracking for analytics (you can integrate with your analytics service)
+			document.querySelectorAll('.thank-you__button, .thank-you__social-link').forEach(button => {
+				button.addEventListener('click', function () {
+					// Example: Send event to analytics
+					console.log('Button clicked:', this.textContent || this.title);
+				});
+			});
+		});
+	</script>
+</body>
+
+</html>
